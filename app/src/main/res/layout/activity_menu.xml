@@ -13,12 +13,16 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar_home"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
 
             <ImageButton
                 android:id="@+id/btn_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
                 android:tint="@color/colorAccent"
                 android:src="@drawable/ic_arrow_back_black_24dp"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
@@ -29,12 +33,13 @@
                 android:text="@string/menu"
                 android:fontFamily="@font/gbold"
                 android:textSize="25sp"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="10dp"
                 android:textColor="@color/colorBlack"/>
 
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout
+            style="@style/TabLayoutStyle"
             android:id="@+id/tabs_menu"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
