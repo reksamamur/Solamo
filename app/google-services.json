@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "844995279439",
+    "firebase_url": "https://mccmcs-fakesolariaselforder.firebaseio.com",
+    "project_id": "mccmcs-fakesolariaselforder",
+    "storage_bucket": "mccmcs-fakesolariaselforder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844995279439:android:ce7e72a632b8dce7",
+        "android_client_info": {
+          "package_name": "com.ta.solamo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844995279439-iva0kll98gkd3tashquam8fj6bisbct3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6ESTO79svTxcY4HkGzuEZ2Bgg463g8QU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:columnCount="2">
+
+        <TextView
+            android:layout_marginStart="20dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/gbold"
+            android:text="@string/welcome"
+            android:textColor="@color/colorBlack"
+            android:textSize="25sp" />
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="15dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_close_black_24dp" />
+
+    </GridLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_sheetMenu"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/gmedium"
+        android:gravity="start"
+        android:padding="20dp"
+        android:text="@string/menu"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_sheetOrder"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/gmedium"
+        android:gravity="start"
+        android:padding="20dp"
+        android:text="@string/order"
+        android:textAllCaps="false"
+        android:textSize="18sp" />
+
+</LinearLayout>
