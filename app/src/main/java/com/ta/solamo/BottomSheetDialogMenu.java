@@ -32,6 +32,15 @@ public class BottomSheetDialogMenu extends BottomSheetDialogFragment {
             }
         });
 
+        btnOpenOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent menuIntent = new Intent(getActivity(), OrderActivity.class);
+                startActivity(menuIntent);
+                dismiss();
+            }
+        });
+
         btnDismiss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

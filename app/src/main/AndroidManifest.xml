@@ -19,9 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuActivity" />
-        <activity
-            android:name=".YourOrderActivity"/>
-        <activity android:name=".DataUserActivity"/>
+        <activity android:name=".YourOrderActivity" />
+        <activity android:name=".DataUserActivity" />
+        <activity android:name=".OrderActivity"></activity>
     </application>
 
 </manifest>

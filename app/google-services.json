@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "844995279439-bfcpv4159gh79e3acldidkd6fskm1fdn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ta.solamo",
+            "certificate_hash": "927c627bc17efd887c105e5a534170c954f7d0b1"
+          }
+        },
+        {
           "client_id": "844995279439-iva0kll98gkd3tashquam8fj6bisbct3.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844995279439-iva0kll98gkd3tashquam8fj6bisbct3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

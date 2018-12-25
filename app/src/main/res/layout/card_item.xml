@@ -4,8 +4,11 @@
     android:id="@+id/mcard_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    app:cardElevation="0dp">
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="2dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,18 +17,20 @@
         android:padding="10dp">
 
         <ImageView
+            android:scaleType="centerCrop"
             android:id="@+id/img_thumb"
             android:layout_width="80dp"
             android:layout_height="80dp" />
 
         <LinearLayout
+            android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_itemName"
+                android:id="@+id/tv_itemNameCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/greguler"
@@ -33,11 +38,12 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/tv_itemPrice"
+                android:id="@+id/tv_itemPriceCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:fontFamily="@font/gmedium"
+                android:fontFamily="@font/gbold"
+                android:textSize="15sp"
                 android:text="Harga Item" />
 
         </LinearLayout>

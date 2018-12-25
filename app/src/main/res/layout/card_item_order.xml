@@ -81,31 +81,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:fontFamily="@font/gmedium"
-                android:text="@string/total_harga"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/tv_totalPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:fontFamily="@font/gbold"
-                android:gravity="start"
-                android:text="@string/total_harga"
-                android:textSize="18sp" />
-        </GridLayout>
     </LinearLayout>
 
 
