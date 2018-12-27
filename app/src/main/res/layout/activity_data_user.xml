@@ -25,7 +25,7 @@
             app:contentInsetStart="0dp">
 
             <ImageButton
-                android:id="@+id/btn_back"
+                android:id="@+id/btn_backUser"
                 android:layout_width="?attr/actionBarSize"
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/selectableItemBackgroundBorderless"
@@ -65,12 +65,12 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:imeOptions="actionNext"
                 android:id="@+id/ed_personName"
-                android:inputType="textPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/gmedium"/>
+                android:fontFamily="@font/gmedium"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -81,25 +81,25 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:imeOptions="actionDone"
                 android:id="@+id/ed_tableNumber"
-                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/gmedium"/>
+                android:fontFamily="@font/gmedium"
+                android:imeOptions="actionDone"/>
 
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
 
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_finish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="15dp"
         android:clickable="true"
         android:focusable="true"
-        android:src="@drawable/ic_navigate_next_black_24dp"
+        android:src="@drawable/ic_check_black_24dp"
         android:tint="@color/colorWhite"
         app:fabSize="normal"
         app:rippleColor="@color/colorPink1" />

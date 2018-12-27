@@ -54,10 +54,14 @@ public class BottomSheetDialogMenuDetail extends BottomSheetDialogFragment {
         appCompatButtonBuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Temp.cartModels.add(new CartModel(Temp.count_id++, tittle, price, Temp.count_quantity++, price, image));
+                Temp.cartModels.add(new CartModel(++Temp.count_id, tittle, price, Temp.count_quantity, image));
                 Log.d(TAG, "onClick: "+Temp.cartModels.size());
                 for (int i = 0; i < Temp.cartModels.size(); i++) {
+                    Log.d(TAG, "onClick: "+Temp.cartModels.get(i).getCart_id());
                     Log.d(TAG, "onClick: "+Temp.cartModels.get(i).getCart_nameItem());
+                    Log.d(TAG, "onClick: "+Temp.cartModels.get(i).getCart_priceItem());
+                    Log.d(TAG, "onClick: "+Temp.cartModels.get(i).getCart_quantity());
+                    Log.d(TAG, "onClick: "+Temp.cartModels.get(i).getCart_image());
                 }
 
             }

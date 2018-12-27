@@ -5,18 +5,16 @@ public class CartModel {
     String cart_nameItem;
     int cart_priceItem;
     int cart_quantity;
-    int cart_priceTotal;
     String cart_image;
 
     public CartModel() {
     }
 
-    public CartModel(int cart_id, String cart_nameItem, int cart_priceItem, int cart_quantity, int cart_priceTotal, String cart_image) {
+    public CartModel(int cart_id, String cart_nameItem, int cart_priceItem, int cart_quantity, String cart_image) {
         this.cart_id = cart_id;
         this.cart_nameItem = cart_nameItem;
         this.cart_priceItem = cart_priceItem;
         this.cart_quantity = cart_quantity;
-        this.cart_priceTotal = cart_priceTotal;
         this.cart_image = cart_image;
     }
 
@@ -50,14 +48,6 @@ public class CartModel {
 
     public void setCart_quantity(int cart_quantity) {
         this.cart_quantity = cart_quantity;
-    }
-
-    public int getCart_priceTotal() {
-        return cart_priceTotal;
-    }
-
-    public void setCart_priceTotal(int cart_priceTotal) {
-        this.cart_priceTotal = cart_priceTotal;
     }
 
     public String getCart_image() {

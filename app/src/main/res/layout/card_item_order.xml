@@ -16,7 +16,7 @@
             android:padding="10dp">
 
             <ImageView
-                android:id="@+id/img_thumb"
+                android:id="@+id/img_thumbCart"
                 android:layout_width="80dp"
                 android:layout_height="80dp" />
 
@@ -27,7 +27,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/tv_itemName"
+                    android:id="@+id/tv_itemNameCart"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/greguler"
@@ -35,7 +35,7 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/tv_itemPrice"
+                    android:id="@+id/tv_itemPriceCart"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -51,7 +51,7 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/btn_min"
+                        android:id="@+id/btn_minCart"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="?attr/selectableItemBackgroundBorderless"
@@ -59,6 +59,7 @@
                         android:src="@drawable/ic_remove_black_24dp" />
 
                     <TextView
+                        android:id="@+id/tv_quantityCart"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/gmedium"
@@ -68,7 +69,7 @@
                         android:textSize="20sp" />
 
                     <ImageButton
-                        android:id="@+id/btn_plus"
+                        android:id="@+id/btn_plusCart"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="?attr/selectableItemBackgroundBorderless"
