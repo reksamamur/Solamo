@@ -1,4 +1,4 @@
-package com.ta.solamo.fragment;
+package com.ta.solamo.model;
 
 public class OfferSetGet {
     private int menu_id;

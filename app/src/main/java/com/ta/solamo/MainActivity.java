@@ -1,6 +1,5 @@
 package com.ta.solamo;
 
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.card.MaterialCardView;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -22,7 +22,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.ta.solamo.bottomsheetdialog.BottomSheetDialogMenu;
 import com.ta.solamo.bottomsheetdialog.BottomSheetDialogMenuDetail;
-import com.ta.solamo.fragment.OfferSetGet;
+import com.ta.solamo.model.OfferSetGet;
 
 import java.util.Calendar;
 
@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements BottomSheetDialog
     FirestoreRecyclerAdapter adapter;
 
     String TAG = getClass().getSimpleName();
+
+    LinearLayout cartAnchor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,13 +61,7 @@ public class MainActivity extends AppCompatActivity implements BottomSheetDialog
         });
 
         btnOrder = findViewById(R.id.btn_order);
-        btnOrder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
-                startActivity(intent);
-            }
-        });
+        cartAnchor = findViewById(R.id.ln_cart);
 
         firebaseFirestore = FirebaseFirestore.getInstance();
 
@@ -76,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements BottomSheetDialog
 
         adapter.notifyDataSetChanged();
         rvOffer.setAdapter(adapter);
+
     }
 
     public void initAdapter(){
@@ -180,4 +177,23 @@ public class MainActivity extends AppCompatActivity implements BottomSheetDialog
         super.onStop();
         adapter.stopListening();
     }
+
+    /*public void checkModel(){
+        Log.d(TAG, "onCreate: "+Temp.cartModels.size());
+
+        if (Temp.cartModels.size() != 0){
+            btnOrder.setVisibility(View.GONE);
+            cartAnchor.setVisibility(View.VISIBLE);
+        }else {
+            btnOrder.setVisibility(View.VISIBLE);
+            cartAnchor.setVisibility(View.GONE);
+            btnOrder.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
+    }*/
 }

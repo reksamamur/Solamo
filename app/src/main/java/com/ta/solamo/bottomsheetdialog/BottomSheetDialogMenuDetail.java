@@ -1,6 +1,7 @@
 package com.ta.solamo.bottomsheetdialog;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,9 +13,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.ta.solamo.MainActivity;
+import com.ta.solamo.MenuActivity;
+import com.ta.solamo.OrderActivity;
 import com.ta.solamo.R;
 import com.ta.solamo.model.CartModel;
 import com.ta.solamo.temp.Temp;
@@ -40,7 +45,7 @@ public class BottomSheetDialogMenuDetail extends BottomSheetDialogFragment {
         final int price = bundle.getInt("posisiPrice");
 
         textViewTittle.setText(String.valueOf(tittle));
-        textViewPrice.setText("Rp. "+String.valueOf(price));
+        textViewPrice.setText("Rp. " + String.valueOf(price));
         //imageViewThumb.setImageDrawable();
 
         Glide.with(getContext())
@@ -58,22 +63,46 @@ public class BottomSheetDialogMenuDetail extends BottomSheetDialogFragment {
             @Override
             public void onClick(View v) {
                 Temp.cartModels.add(new CartModel(++Temp.count_id, tittle, price, Temp.count_quantity, image));
-                Log.d(TAG, "onClick: "+Temp.cartModels.size());
+                Log.d(TAG, "onClick: " + Temp.cartModels.size());
                 for (int i = 0; i < Temp.cartModels.size(); i++) {
-                    Log.d(TAG, "onClick: "+Temp.cartModels.get(i).getCart_id());
-                    Log.d(TAG, "onClick: "+Temp.cartModels.get(i).getCart_nameItem());
-                    Log.d(TAG, "onClick: "+Temp.cartModels.get(i).getCart_priceItem());
-                    Log.d(TAG, "onClick: "+Temp.cartModels.get(i).getCart_quantity());
-                    Log.d(TAG, "onClick: "+Temp.cartModels.get(i).getCart_image());
+                    Log.d(TAG, "onClick: " + Temp.cartModels.get(i).getCart_id());
+                    Log.d(TAG, "onClick: " + Temp.cartModels.get(i).getCart_nameItem());
+                    Log.d(TAG, "onClick: " + Temp.cartModels.get(i).getCart_priceItem());
+                    Log.d(TAG, "onClick: " + Temp.cartModels.get(i).getCart_quantity());
+                    Log.d(TAG, "onClick: " + Temp.cartModels.get(i).getCart_image());
                 }
+                Log.d(TAG, "onCreate: " + Temp.cartModels.size());
 
+                /*AppCompatButton btnOrder = v.findViewById(R.id.btn_order);
+                LinearLayout cartAnchor = v.findViewById(R.id.ln_cart);
+                if (Temp.cartModels.size() != 0) {
+                    btnOrder.setVisibility(View.GONE);
+                    cartAnchor.setVisibility(View.VISIBLE);
+                    cartAnchor.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent menuIntent = new Intent(getActivity(), OrderActivity.class);
+                            startActivity(menuIntent);
+                        }
+                    });
+                } else {
+                    btnOrder.setVisibility(View.VISIBLE);
+                    cartAnchor.setVisibility(View.GONE);
+                    btnOrder.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getContext(), MenuActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+                }*/
             }
         });
 
         return v;
     }
 
-    public interface BottomSheetListenerDetail{
+    public interface BottomSheetListenerDetail {
         void onBottomSheetClickedDetail();
     }
 
@@ -82,7 +111,7 @@ public class BottomSheetDialogMenuDetail extends BottomSheetDialogFragment {
         super.onAttach(context);
         try {
             BottomSheetListenerDetail bottomSheetListener = (BottomSheetListenerDetail) context;
-        }catch (ClassCastException e){
+        } catch (ClassCastException e) {
             throw new ClassCastException(context.toString() + "Implemet BottomSheetListener interface");
         }
     }
