@@ -1,7 +1,6 @@
 package com.ta.solamo;
 
 import android.content.Intent;
-import android.support.v4.math.MathUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
@@ -9,6 +8,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import com.ta.solamo.adapter.CartAdapter;
+import com.ta.solamo.temp.Temp;
 
 public class OrderActivity extends AppCompatActivity {
 
@@ -32,6 +34,7 @@ public class OrderActivity extends AppCompatActivity {
         rvCart.setLayoutManager(layoutManager);
         rvCart.setAdapter(adapter);
 
+        // hitung total price item
         for (int i = 0; i < Temp.cartModels.size(); i++) {
             Temp.total_price += Temp.cartModels.get(i).getCart_priceItem();
         }

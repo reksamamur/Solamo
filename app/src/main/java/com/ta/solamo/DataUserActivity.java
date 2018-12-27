@@ -15,7 +15,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreSettings;
+import com.ta.solamo.model.UserModel;
+import com.ta.solamo.temp.Temp;
 
 public class DataUserActivity extends AppCompatActivity {
 

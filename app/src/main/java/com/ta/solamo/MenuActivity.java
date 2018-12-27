@@ -7,6 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.ta.solamo.adapter.MenuPagerAdapter;
+import com.ta.solamo.fragment.ExpressBowlFragment;
+import com.ta.solamo.fragment.LainnyaFragment;
+import com.ta.solamo.fragment.MieFragment;
+import com.ta.solamo.fragment.PaketFragment;
+import com.ta.solamo.fragment.SnackFragment;
+import com.ta.solamo.fragment.SpesialFragment;
+
 public class MenuActivity extends AppCompatActivity {
 
 

@@ -1,4 +1,4 @@
-package com.ta.solamo;
+package com.ta.solamo.fragment;
 
 
 import android.os.Bundle;
@@ -7,14 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ta.solamo.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SnackFragment extends Fragment {
+public class MieFragment extends Fragment {
 
 
-    public SnackFragment() {
+    public MieFragment() {
         // Required empty public constructor
     }
 
@@ -23,7 +25,7 @@ public class SnackFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_snack, container, false);
+        return inflater.inflate(R.layout.fragment_mie, container, false);
     }
 
 }

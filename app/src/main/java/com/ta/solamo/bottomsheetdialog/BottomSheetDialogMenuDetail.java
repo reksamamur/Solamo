@@ -1,4 +1,4 @@
-package com.ta.solamo;
+package com.ta.solamo.bottomsheetdialog;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -15,6 +15,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.ta.solamo.R;
+import com.ta.solamo.model.CartModel;
+import com.ta.solamo.temp.Temp;
 
 public class BottomSheetDialogMenuDetail extends BottomSheetDialogFragment {
 

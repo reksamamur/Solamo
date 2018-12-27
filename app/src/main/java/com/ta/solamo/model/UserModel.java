@@ -1,4 +1,4 @@
-package com.ta.solamo;
+package com.ta.solamo.model;
 
 import java.util.ArrayList;
 

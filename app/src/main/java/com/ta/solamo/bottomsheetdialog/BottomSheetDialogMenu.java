@@ -1,4 +1,4 @@
-package com.ta.solamo;
+package com.ta.solamo.bottomsheetdialog;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+
+import com.ta.solamo.MenuActivity;
+import com.ta.solamo.OrderActivity;
+import com.ta.solamo.R;
 
 public class BottomSheetDialogMenu extends BottomSheetDialogFragment {
 

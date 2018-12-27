@@ -1,4 +1,6 @@
-package com.ta.solamo;
+package com.ta.solamo.temp;
+
+import com.ta.solamo.model.CartModel;
 
 import java.util.ArrayList;
 
