@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetDialogFragment;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.AppCompatButton;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -71,31 +72,17 @@ public class BottomSheetDialogMenuDetail extends BottomSheetDialogFragment {
                     Log.d(TAG, "onClick: " + Temp.cartModels.get(i).getCart_quantity());
                     Log.d(TAG, "onClick: " + Temp.cartModels.get(i).getCart_image());
                 }
-                Log.d(TAG, "onCreate: " + Temp.cartModels.size());
-
-                /*AppCompatButton btnOrder = v.findViewById(R.id.btn_order);
-                LinearLayout cartAnchor = v.findViewById(R.id.ln_cart);
-                if (Temp.cartModels.size() != 0) {
-                    btnOrder.setVisibility(View.GONE);
-                    cartAnchor.setVisibility(View.VISIBLE);
-                    cartAnchor.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent menuIntent = new Intent(getActivity(), OrderActivity.class);
-                            startActivity(menuIntent);
-                        }
-                    });
-                } else {
-                    btnOrder.setVisibility(View.VISIBLE);
-                    cartAnchor.setVisibility(View.GONE);
-                    btnOrder.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent(getContext(), MenuActivity.class);
-                            startActivity(intent);
-                        }
-                    });
-                }*/
+                Snackbar snackbar = Snackbar
+                        .make(getActivity().findViewById(android.R.id.content), "Added to Cart", Snackbar.LENGTH_LONG)
+                        .setAction("SEE", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(getActivity(), OrderActivity.class);
+                                startActivity(intent);
+                            }
+                        });
+                snackbar.show();
+                dismiss();
             }
         });
 

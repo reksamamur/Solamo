@@ -1,5 +1,6 @@
 package com.ta.solamo;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.card.MaterialCardView;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +25,7 @@ import com.google.firebase.firestore.Query;
 import com.ta.solamo.bottomsheetdialog.BottomSheetDialogMenu;
 import com.ta.solamo.bottomsheetdialog.BottomSheetDialogMenuDetail;
 import com.ta.solamo.model.OfferSetGet;
+import com.ta.solamo.temp.Temp;
 
 import java.util.Calendar;
 
@@ -72,7 +75,6 @@ public class MainActivity extends AppCompatActivity implements BottomSheetDialog
 
         adapter.notifyDataSetChanged();
         rvOffer.setAdapter(adapter);
-
     }
 
     public void initAdapter(){
@@ -177,23 +179,4 @@ public class MainActivity extends AppCompatActivity implements BottomSheetDialog
         super.onStop();
         adapter.stopListening();
     }
-
-    /*public void checkModel(){
-        Log.d(TAG, "onCreate: "+Temp.cartModels.size());
-
-        if (Temp.cartModels.size() != 0){
-            btnOrder.setVisibility(View.GONE);
-            cartAnchor.setVisibility(View.VISIBLE);
-        }else {
-            btnOrder.setVisibility(View.VISIBLE);
-            cartAnchor.setVisibility(View.GONE);
-            btnOrder.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(MainActivity.this, MenuActivity.class);
-                    startActivity(intent);
-                }
-            });
-        }
-    }*/
 }

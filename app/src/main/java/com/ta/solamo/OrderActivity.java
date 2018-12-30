@@ -7,6 +7,7 @@ import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.ta.solamo.adapter.CartAdapter;
@@ -17,6 +18,7 @@ public class OrderActivity extends AppCompatActivity {
     RecyclerView rvCart;
     TextView tvTotalPriceCart;
     AppCompatButton btnProcessCart;
+    ImageButton btnBack;
 
     CartAdapter adapter;
 
@@ -28,6 +30,7 @@ public class OrderActivity extends AppCompatActivity {
         rvCart = findViewById(R.id.rv_cart);
         tvTotalPriceCart = findViewById(R.id.tv_tPrice);
         btnProcessCart = findViewById(R.id.btn_processCart);
+        btnBack = findViewById(R.id.btn_back);
 
         adapter = new CartAdapter(this, Temp.cartModels);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
@@ -41,9 +44,6 @@ public class OrderActivity extends AppCompatActivity {
 
         int t_price = Temp.total_price;
 
-        Bundle bundle = new Bundle();
-        bundle.putInt("total_price_TAG", t_price);
-
         tvTotalPriceCart.setText(String.valueOf(t_price));
 
         btnProcessCart.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +51,13 @@ public class OrderActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(OrderActivity.this, DataUserActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
 

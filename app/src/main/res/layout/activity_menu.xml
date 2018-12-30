@@ -36,6 +36,21 @@
                 android:layout_marginStart="10dp"
                 android:textColor="@color/colorBlack"/>
 
+            <FrameLayout
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btn_cartMenu"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:tint="@color/colorAccent"
+                    android:src="@drawable/ic_shopping_cart_black_24dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            </FrameLayout>
+
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout

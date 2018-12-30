@@ -1,7 +1,7 @@
 package com.ta.solamo.model;
 
 public class OfferSetGet {
-    private int menu_id;
+    private String menu_id;
     private String menu_name;
     private String menu_category;
     private String menu_image;
@@ -10,7 +10,7 @@ public class OfferSetGet {
     public OfferSetGet() {
     }
 
-    public OfferSetGet(int menu_id, String menu_name, String menu_category, String menu_image, int menu_price) {
+    public OfferSetGet(String menu_id, String menu_name, String menu_category, String menu_image, int menu_price) {
         this.menu_id = menu_id;
         this.menu_name = menu_name;
         this.menu_category = menu_category;
@@ -18,11 +18,11 @@ public class OfferSetGet {
         this.menu_price = menu_price;
     }
 
-    public int getMenu_id() {
+    public String getMenu_id() {
         return menu_id;
     }
 
-    public void setMenu_id(int menu_id) {
+    public void setMenu_id(String menu_id) {
         this.menu_id = menu_id;
     }
 
