@@ -73,14 +73,7 @@ public class BottomSheetDialogMenuDetail extends BottomSheetDialogFragment {
                     Log.d(TAG, "onClick: " + Temp.cartModels.get(i).getCart_image());
                 }
                 Snackbar snackbar = Snackbar
-                        .make(getActivity().findViewById(android.R.id.content), "Added to Cart", Snackbar.LENGTH_LONG)
-                        .setAction("SEE", new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                Intent intent = new Intent(getActivity(), OrderActivity.class);
-                                startActivity(intent);
-                            }
-                        });
+                        .make(getActivity().findViewById(android.R.id.content), "Added to Cart", Snackbar.LENGTH_LONG);
                 snackbar.show();
                 dismiss();
             }

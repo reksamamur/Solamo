@@ -54,7 +54,7 @@
         android:fontFamily="@font/gmedium"
         android:gravity="start"
         android:padding="20dp"
-        android:text="@string/order"
+        android:text="@string/cart"
         android:textAllCaps="false"
         android:textSize="18sp" />
 
