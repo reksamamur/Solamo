@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:fontFamily="@font/gbold"
-                android:text="@string/total_harga"
+                android:text="0"
                 android:textSize="18sp" />
         </GridLayout>
 
