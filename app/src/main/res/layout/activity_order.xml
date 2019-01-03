@@ -7,7 +7,8 @@
     tools:context=".OrderActivity">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/appBarTop"
+        android:visibility="visible"
+        android:id="@+id/appBarTopCart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -41,22 +42,53 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <LinearLayout
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/linearEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/colorWhite"
+            android:padding="60dp"
+            android:src="@drawable/cart" />
+
+        <Button
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:id="@+id/btn_buySMT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:fontFamily="@font/gbold"
+            android:textSize="18sp"
+            android:text="Go Buy Something!"/>
+    </LinearLayout>
+
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_cart"
-        android:layout_below="@id/appBarTop"
-        android:layout_above="@id/linearbottom"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@id/linearbottom"
+        android:layout_below="@id/appBarTopCart"
+        android:visibility="visible">
 
     </android.support.v7.widget.RecyclerView>
 
     <LinearLayout
-        android:orientation="vertical"
         android:id="@+id/linearbottom"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="visible">
 
         <GridLayout
             android:id="@+id/gridparent"
@@ -76,12 +108,12 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:gravity="end"
                 android:id="@+id/tv_tPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:fontFamily="@font/gbold"
+                android:gravity="end"
                 android:text="0"
                 android:textSize="18sp" />
         </GridLayout>

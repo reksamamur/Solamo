@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements BottomSheetDialog
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Log.d(TAG, "onCreate: array size: " + Temp.cartModels.size());
+
         tvGreetings = findViewById(R.id.tv_greeting);
         imgGreetings = findViewById(R.id.img_greeting);
         initGreetings();
@@ -64,6 +66,13 @@ public class MainActivity extends AppCompatActivity implements BottomSheetDialog
         });
 
         btnOrder = findViewById(R.id.btn_order);
+        btnOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
         cartAnchor = findViewById(R.id.ln_cart);
 
         firebaseFirestore = FirebaseFirestore.getInstance();

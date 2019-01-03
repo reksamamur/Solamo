@@ -1,5 +1,6 @@
 package com.ta.solamo;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -42,7 +43,18 @@ public class DataUserActivity extends AppCompatActivity {
         btnFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addOrder();
+                if (editTextName.getText().toString().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Kosong", Toast.LENGTH_LONG).show();
+                } else {
+                    addOrder();
+                }
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
     }
@@ -59,6 +71,10 @@ public class DataUserActivity extends AppCompatActivity {
                     public void onSuccess(DocumentReference documentReference) {
                         Toast.makeText(getApplicationContext(), "Succes", Toast.LENGTH_SHORT).show();
                         Log.d(TAG, "onSuccess: sukses");
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+                        Temp.cartModels.clear();
+                        finish();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
