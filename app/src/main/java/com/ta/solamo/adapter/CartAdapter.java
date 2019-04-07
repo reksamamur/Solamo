@@ -40,8 +40,17 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartAdapterVie
     @Override
     public void onBindViewHolder(@NonNull final CartAdapterViewHolder holder, int i) {
         final CartModel current = arrayList.get(i);
+
         holder.textViewTittle.setText(String.valueOf(current.getCart_nameItem()));
         holder.textViewPrice.setText("Rp. "+String.valueOf(current.getCart_priceItem()));
+        if(current.getCart_priceItem() == 1)
+        {
+            holder.textViewQTY.setText(current.getCart_quantity() + " item");
+        }
+        else
+        {
+            holder.textViewQTY.setText(current.getCart_quantity() + " items");
+        }
         Glide.with(context)
                 .load(current.getCart_image())
                 .into(holder.imageViewThumb);
@@ -49,14 +58,6 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartAdapterVie
             @Override
             public void onClick(View v) {
                 arrayList.remove(current);
-                Log.d(TAG, "onClick cart: " + Temp.cartModels.size());
-                for (int i = 0; i < Temp.cartModels.size(); i++) {
-                    Log.d(TAG, "onClick cart: " + Temp.cartModels.get(i).getCart_id());
-                    Log.d(TAG, "onClick cart: " + Temp.cartModels.get(i).getCart_nameItem());
-                    Log.d(TAG, "onClick cart: " + Temp.cartModels.get(i).getCart_priceItem());
-                    Log.d(TAG, "onClick cart: " + Temp.cartModels.get(i).getCart_quantity());
-                    Log.d(TAG, "onClick cart: " + Temp.cartModels.get(i).getCart_image());
-                }
                 notifyDataSetChanged();
             }
         });
@@ -79,6 +80,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartAdapterVie
             imageViewThumb = itemView.findViewById(R.id.img_thumbCart);
             textViewTittle = itemView.findViewById(R.id.tv_itemNameCart);
             textViewPrice = itemView.findViewById(R.id.tv_itemPriceCart);
+            textViewQTY = itemView.findViewById(R.id.tv_itemQtyCart);
             imageButtonDel = itemView.findViewById(R.id.btn_Delete);
         }
     }

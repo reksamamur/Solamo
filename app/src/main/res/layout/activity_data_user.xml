@@ -52,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gbold"
-                android:text="Input Your Name and Your Table Number"
+                android:text="@string/input_your_name_and_your_table_number"
                 android:textColor="@color/colorBlack"
                 android:textSize="30sp" />
 

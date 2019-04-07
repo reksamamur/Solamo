@@ -66,11 +66,9 @@ public class OrderActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Toast.makeText(OrderActivity.this, "size == + " + i, Toast.LENGTH_LONG).show();
                 if (Temp.cartModels.size() != 0) {
-                    Log.d(TAG, "onClick: != " + Temp.cartModels.size());
                     Intent intent = new Intent(getApplicationContext(), DataUserActivity.class);
                     startActivity(intent);
                 } else {
-                    Log.d(TAG, "onClick: nothing ==");
                     showEmptyDialog();
                 }
             }
@@ -109,11 +107,8 @@ public class OrderActivity extends AppCompatActivity {
     public int getTotalPrice() {
         int totalCost = 0;
         for (int i = 0; i < Temp.cartModels.size(); i++) {
-            totalCost += Temp.cartModels.get(i).getCart_priceItem();
-            //Temp.total_price += Temp.cartModels.get(i).getCart_priceItem();
+            totalCost += Temp.cartModels.get(i).getCart_priceItem() * Temp.cartModels.get(i).getCart_quantity();
             Temp.total_price = totalCost;
-            Log.d(TAG, "onCreate: Price " + Temp.total_price);
-            Log.d(TAG, "onCreate: Price " + totalCost);
             tvTotalPriceCart.setText("Rp. " + String.valueOf(Temp.total_price));
         }
 
@@ -121,7 +116,6 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     public void initEmpty(){
-        Log.d(TAG, "initEmpty: size: "+Temp.cartModels.size());
         if (Temp.cartModels.size() == 0){
             rvCart.setVisibility(View.GONE);
             linearLayoutProcced.setVisibility(View.GONE);

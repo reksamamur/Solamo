@@ -157,7 +157,7 @@
             android:drawableStart="@drawable/ic_shopping_cart_black_24dp"
             android:drawablePadding="10dp"
             android:drawableTint="@color/colorWhite"
-            android:text="Jumlah Item"
+            android:text="@string/jumlah_item"
             android:textColor="@color/colorWhite"
             android:textSize="15sp" />
 
@@ -168,7 +168,7 @@
             android:layout_weight="1"
             android:gravity="end"
             android:paddingEnd="20dp"
-            android:text="1"
+            android:text="@string/_1"
             android:textColor="@color/colorWhite"
             android:textSize="18sp" />
 

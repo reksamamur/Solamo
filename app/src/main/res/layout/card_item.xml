@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/greguler"
-                android:text="Nama Item"
+                android:text="@string/nama_item"
                 android:textSize="18sp" />
 
             <TextView
@@ -44,7 +44,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/gbold"
                 android:textSize="15sp"
-                android:text="Harga Item" />
+                android:text="@string/harga_item" />
 
         </LinearLayout>
 

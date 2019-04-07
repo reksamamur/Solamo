@@ -43,9 +43,16 @@ public class DataUserActivity extends AppCompatActivity {
         btnFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (editTextName.getText().toString().isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Kosong", Toast.LENGTH_LONG).show();
-                } else {
+                if (editTextName.getText().toString().isEmpty())
+                {
+                    editTextName.setError("Nama pemesan tidak boleh kososng");
+                }
+                else if (editTextTable.getText().toString().isEmpty())
+                {
+                    editTextTable.setError("Nomor meja tidak boleh kosong");
+                }
+                else
+                {
                     addOrder();
                 }
             }
